@@ -41,7 +41,7 @@
     }
   }
   .welcome{
-    padding: 65px 30px 0px 30px;
+    padding: 45px 30px 0px 30px;
     color: #fff;
     font-size: 16px;
     letter-spacing: 0.8px;
@@ -55,9 +55,11 @@
       padding: 0;
     }
   }
+
   svg{
     position: absolute;
     width: 300px;
+    bottom: -85px;
     stroke: $color-pink;
     stroke-width: 1.5px;
   }
