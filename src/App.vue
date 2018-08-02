@@ -12,6 +12,7 @@ export default {
 
 <style lang="scss">
 #app {
+  
   background-image: linear-gradient(
     to right,
     #2d1b59 0%,
@@ -19,6 +20,7 @@ export default {
     #2d1b59 100%
   );
   width: 100%;
+  min-width: 1024px;
   height: 100%;
   margin: 0;
   padding: 0;
