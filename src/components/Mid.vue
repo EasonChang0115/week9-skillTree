@@ -9,8 +9,10 @@
         <img :src="item.img" alt="">
       </div>
       <div class="skills">
-        <div class="skill" v-for="(skill, sindex) in item.skill" :key='sindex'>
-          <div class="icon" :class="{focus: skill.name === nowFocus, done: checkIsAllSelected(skill)}" @click="focus(skill)">
+        <div class="skill" v-for="(skill, sindex) in item.skill"
+          :class="{done: checkIsAllSelected(skill)}"
+          :key='sindex'>
+          <div class="icon" :class="{focus: skill.name === nowFocus}" @click="focus(skill)">
             <i class="material-icons">{{ skill.icon }}</i>
           </div>
           <div class="val">

@@ -45,14 +45,32 @@
       color: white;
       .skill{
         display: inline-block;
-        margin: 0px 1px;
+        margin: 0px 2px;
+        &.done{
+          color: $color-purple;
+          .icon i {
+            color: $color-purple;
+            // overflow: hidden;
+            &::before {
+              content: '';
+              position: absolute;
+              right: -3px;
+              top: -3px;
+              display: block;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 0 15px 15px 0;
+              border-color: transparent $color-purple transparent transparent;
+            }
+          }
+        }
         .icon{
           cursor: pointer;
           padding: 3px;
           margin-bottom: 5px;
-          background: rgba(255, 255, 255, .1);
-          border: 2px solid rgba(255, 255, 255, .1);
-          box-sizing: border-box;
+          background-color: rgba(255, 255, 255, .1);
+          border: 2px solid transparent;
           transition: .3s;
           i{
             transition: .3s;
@@ -68,12 +86,11 @@
         }
         .focus{
           border: 2px solid $color-pink;
-        }
-        .done{
-          background: $color-purple;
-          i{
-            color: rgba(255,255,255,1)
+          background-color: $color-purple;
+          i {
+            color: white !important;
           }
+          
         }
         .val{
           margin-bottom: 10px;
