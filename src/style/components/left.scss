@@ -1,0 +1,76 @@
+@import '../all.scss';
+
+.left {
+  position: relative;
+  h1 {
+    font-size: 48px;
+    color: $color-pink;
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  .current {
+    .tag {
+      display: inline-block;
+      padding: 0px 16px;
+      margin: 5px 0px;
+      background-color: $color-blue;
+      font-size: 16px;
+      font-weight: bold;
+      color: $color-dark-blue;
+      height: 27px;
+      line-height: 27px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      span {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 0;
+        background: none;
+        font-size: 36px;
+        line-height: 42px;
+        color: #fff;
+        border-bottom: 4px solid $color-blue;
+      }
+    }
+  }
+  .ship{
+    img{
+      margin: 15px 0;
+      animation: 2s wave infinite linear;
+    }
+  }
+  .welcome{
+    padding: 65px 30px 0px 30px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 24px;
+    font-weight: 200;
+    span{
+      color: $color-pink;
+      font-weight: bold;
+      letter-spacing: 0px;
+      background: none;
+      padding: 0;
+    }
+  }
+  svg{
+    position: absolute;
+    width: 300px;
+    stroke: $color-pink;
+    stroke-width: 1.5px;
+  }
+}
+
+@keyframes wave{
+  0%{
+    transform: translateY(0%)
+  }
+  50%{
+    transform: translateY(5%)
+  }
+  100%{
+    transform: translateY(0%)
+  }
+}

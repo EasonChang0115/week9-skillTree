@@ -1,0 +1,62 @@
+@import '../all.scss';
+
+.right {
+  transition: all .3s;
+  * {
+    transition: all .3s;
+  }
+  .contain {
+    border: 2px solid $color-pink;
+    background-color: $color-blue;
+    color: white;
+    text-align: center;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    .top {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 3;
+      i{
+        font-size: 108px;
+      }
+      p{
+        font-weight: 900;
+        font-size: 36px;
+      }
+    }
+    .bottom {
+      flex: 6;
+      padding: 20px 40px;
+      background-color: $color-purple;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .recommend,.option {
+        width: 100%;
+      }
+      i{
+        margin-top: 20px;
+        font-size: 42px;
+      }
+      span{
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        border: 2px solid #fff;
+        display: block;
+        padding: 5px 20px;
+        margin: 15px 0px;
+      }
+      .selected{
+        background: $color-pink;
+        border: 2px solid $color-pink;
+      }
+    }
+  }
+
+}

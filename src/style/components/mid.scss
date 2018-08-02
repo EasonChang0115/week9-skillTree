@@ -1,0 +1,95 @@
+@import '../all.scss';
+
+.mid {
+  position: relative;
+  .off{
+    pointer-events: none;
+  }
+  .bg {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    left: 45px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    .rect{
+      position: relative;
+      width: 40px;
+      height: calc(100% - 27px);
+      background: rgba(#6900D1, 0.4);
+      transform: translateX(-9px);
+      transition: .3s;
+    }
+    .triangle{
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 13px 31px 0px 31px;
+      border-color: rgba(#6900D1, 0.4) transparent transparent transparent;
+      transform: translateX(-20px);
+    }
+  }
+  .basics {
+    display: flex;
+    margin: 10px 0;
+    .thumb {
+      padding: 0 10px;
+      img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+    .skills {
+      color: white;
+      .skill{
+        display: inline-block;
+        margin: 0px 1px;
+        .icon{
+          cursor: pointer;
+          padding: 3px;
+          margin-bottom: 5px;
+          background: rgba(255, 255, 255, .1);
+          border: 2px solid rgba(255, 255, 255, .1);
+          box-sizing: border-box;
+          transition: .3s;
+          i{
+            transition: .3s;
+            font-size: 48px;
+            color: rgba(255,255,255,0.3);
+          }
+          &:hover{
+            border: 2px solid rgba(255, 255, 255, .8);
+            i{
+              color: rgba(255,255,255,0.8)
+            }
+          }
+        }
+        .focus{
+          border: 2px solid $color-pink;
+        }
+        .done{
+          background: $color-purple;
+          i{
+            color: rgba(255,255,255,1)
+          }
+        }
+        .val{
+          margin-bottom: 10px;
+          p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 2px;
+            font-size: 14px;
+            i{
+              font-size: 18px;
+              margin: 0 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
